@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS Template</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+
+    nav {
+      float: left;
+      width: 30%;
+      height: 300px;
+      /* only for demonstration, should be removed */
+      background: #ccc;
+      padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      height: 300px;
+      /* only for demonstration, should be removed */
+    }
+
+    /* Clear floats after the columns */
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Style the footer */
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+
+      nav,
+      article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <img src="https://placekittens.com/100/100" style="float:left">
+    <p style="clear : left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus, quidem doloribus ea itaque est! Mollitia dolores eius est aperiam facilis hic magni atque, rem consequuntur eum. Expedita, dolor voluptate nostrum neque vel hic error nesciunt consectetur natus unde quia aperiam? Libero quam atque ratione! Delectus, sint sapiente. Ea, ratione, molestias architecto provident reprehenderit aut minus quos modi soluta temporibus laudantium commodi ut blanditiis qui veniam repudiandae maiores excepturi. Ipsum soluta aperiam inventore corrupti quidem tempora sunt, dolor ad? Asperiores neque, adipisci vel quidem deserunt veritatis ullam. Alias laborum consequatur expedita, aperiam qui similique, sunt, voluptas commodi possimus non voluptates aut pariatur hic praesentium? Ea dolor libero, alias quod illo labore corrupti eligendi et totam accusantium veniam eius modi iste aperiam repudiandae cumque eum inventore ad fugiat cum! Omnis ullam enim, placeat ducimus iusto voluptate. Eaque maiores id vero atque ut dolorum maxime totam, ullam quae rem reprehenderit aliquam blanditiis est corporis ratione eum exercitationem aliquid dignissimos dicta, cum, provident ea at illo? Repellendus dolor consequuntur explicabo obcaecati earum! Nulla accusantium officia voluptatibus repellat quia nisi hic, quam incidunt corrupti facilis nostrum saepe voluptate eos unde ea iste, doloremque, quae dolor provident eius quis consequuntur vero quas. Corrupti, minima nostrum.</p>
+  </div>
+  <h2>CSS Layout Float</h2>
+  <p>In this example, r.</p>
+  <p>Resize the browser wir - HTML Responsive.)</p>
+  <header>
+    <h2>Cities</h2>
+  </header>
+  <section>
+    <nav>
+      <ul>
+        <li><a href="#">London</a></li>
+        <li><a href="#">Paris</a></li>
+      </ul>
+    </nav>
+    <article>
+      <h1>London</h1>
+      <p>London is the capital city of </p>
+      <p>Standing on the River </p>
+    </article>
+  </section>
+  <footer>
+    <p>Footer</p>
+  </footer>
+</body>
+
+</html>

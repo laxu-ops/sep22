@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+nav {
+    background-color: #2062be;
+    padding: 30px;
+    animation: navDown 1s ease;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+
+/* H1 Fade In */
+h1 {
+    color: #1d3557;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Form Bottom to Up */
+form {
+    background-color: lightskyblue;
+    width: 700px;
+    min-height: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 15px;
+    animation: formUp 1s ease;
+}
+
+@keyframes formUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Input Size */
+label {
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    height: 35px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+
+/* Radio and Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"],
+button {
+    background-color: #2062be;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    background-color: yellow;
+    color: black;
+   
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    transform: scale(1.03);
+
+    
+}
+@keyframes navDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: lightcyan;
+}
+
+
+</style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+
+    <h1>Registration Form</h1>
+    <p style="text-align: center;">Create your account</p>
+
+    <hr>
+
+    <form action="login.html">
+
+        <fieldset>
+
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="first-name">First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text"
+                               id="first-name"
+                               size="45"
+                               placeholder="Enter your first name"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="last-name">Last Name:</label>
+                    </td>
+                    <td>
+                        <input type="text"
+                               id="last-name"
+                               size="45"
+                               placeholder="Enter your last name"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="email"
+                               id="email"
+                               size="45"
+                               placeholder="example@email.com"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="phone">Phone:</label>
+                    </td>
+                    <td>
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               size="45"
+                               pattern="[0-9]{10}"
+                               title="Please enter a proper 10-digit phone number"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Gender:</label>
+                    </td>
+
+                    <td>
+                        <input type="radio"
+                               id="male"
+                               name="gender"
+                               value="Ma"
+                               required>
+
+                        <label for="male">Male</label>
+
+                        &nbsp;&nbsp;
+
+                        <input type="radio"
+                               id="female"
+                               name="gender"
+                               value="Fe">
+
+                        <label for="female">Female</label>
+
+                        &nbsp;&nbsp;
+
+                        <input type="radio"
+                               id="others"
+                               name="gender"
+                               value="Ot">
+
+                        <label for="others">Others</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+
+                    <td>
+                        <input type="password"
+                               id="password"
+                               size="45"
+                               placeholder="Enter password"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="confirm-password">
+                            Confirm Password:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="password"
+                               id="confirm-password"
+                               size="45"
+                               placeholder="Confirm password"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox"
+                               id="terms"
+                               required>
+
+                        <label for="terms">
+                            I agree to the terms and conditions.
+                        </label>
+                    </td>
+                </tr>
+
+            </table>
+
+            <br>
+
+            <center>
+                <input type="submit" value="Register">
+                &nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Reset">
+                &nbsp;&nbsp;&nbsp;
+                <button type="button" onclick="window.location='login.html'">
+                    Already registered?
+                </button>
+            </center>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
